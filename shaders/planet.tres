@@ -10,7 +10,8 @@ void fragment() {
 	vec2 pos = (UV - vec2(0.5, 0.5)) * 2.0;
 	float r = sqrt(pow(pos.x, 2.0) + pow(pos.y, 2.0));
 	if (r < planet_radius) {
-		COLOR = vec4(vec3(0.5, 0.7, 0.2) * clamp(r, 0.6, 1), 1.0);
+		// COLOR = vec4(vec3(0.5, 0.7, 0.2) * clamp(r, 0.6, 1), 1.0);
+		COLOR = texture(TEXTURE, UV);
 	} else if (r < atmosphere_radius) {
 		COLOR = vec4(0.6, 0.7, 0.95, clamp((1.0 - (r - planet_radius) / (atmosphere_radius - planet_radius)) * 0.7, 0.05, 0.5));
 	} else {

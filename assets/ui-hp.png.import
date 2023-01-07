@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/asteroids.png-a88be4cdd359f8179e0afe99115a0a31.stex"
+path="res://.import/ui-hp.png-6a729b45cd0ba5998f50575c49b41f3c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asteroids.png"
-dest_files=[ "res://.import/asteroids.png-a88be4cdd359f8179e0afe99115a0a31.stex" ]
+source_file="res://assets/ui-hp.png"
+dest_files=[ "res://.import/ui-hp.png-6a729b45cd0ba5998f50575c49b41f3c.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
@@ -31,5 +31,5 @@ process/invert_color=false
 process/normal_map_invert_y=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0

@@ -1,6 +1,6 @@
 extends Node2D
 
-const MIN_DISTANCE = 200
+const MIN_DISTANCE = 300
 
 func _process(delta):
 	if global_position.distance_to(Vector2.ZERO) > MIN_DISTANCE:

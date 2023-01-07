@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://TextFloater.gd" type="Script" id=1]
+
+[node name="TextFloater" type="Label"]
+margin_right = 65.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.4, 0.4 )
+text = "Testing"
+percent_visible = -0.142857
+script = ExtResource( 1 )

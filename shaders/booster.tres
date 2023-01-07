@@ -1,0 +1,15 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform vec4 color : hint_color;
+
+const float PI = 3.14;
+
+void fragment() {
+	float t = abs(sin(TIME * 10.0) + sin(TIME * 8.3) +  + sin(TIME * 13.0));
+	float f = max(0.0, sin(UV.x * PI - (0.5 - UV.x) * pow(UV.y + cos(TIME * 5.0) * 0.1, 2.0) * PI) * (1.0 - UV.y)) * 2.0 * max(0.8, t);
+	COLOR = vec4(color.rgb, color.a * f);
+}
+"
