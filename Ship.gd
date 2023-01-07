@@ -4,7 +4,7 @@ const ROTATION_ACCELERATION = 0.1
 const MAX_ROTATION_SPEED = 1.2
 const MAX_SPEED = 200
 const ACCELERATION = 100
-const GRAVITY = 5
+const GRAVITY = 4
 
 var velocity = Vector2.ZERO
 var angularVelocity = 0
