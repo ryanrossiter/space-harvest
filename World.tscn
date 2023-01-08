@@ -1,10 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Ship.tscn" type="PackedScene" id=1]
-[ext_resource path="res://planet.png" type="Texture" id=2]
+[ext_resource path="res://assets/planet2.png" type="Texture" id=2]
 [ext_resource path="res://Planet.gd" type="Script" id=3]
 [ext_resource path="res://World.gd" type="Script" id=4]
-[ext_resource path="res://Asteroid.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Dog.tscn" type="PackedScene" id=5]
 [ext_resource path="res://shaders/stars.gdshader" type="Shader" id=6]
 [ext_resource path="res://Background.gd" type="Script" id=7]
 [ext_resource path="res://shaders/planet.tres" type="Shader" id=8]
@@ -39,6 +39,11 @@ region = Rect2( 64, 0, 64, 128 )
 atlas = ExtResource( 9 )
 region = Rect2( 41, 64, 12, 59 )
 
+[sub_resource type="BitmapFont" id=11]
+
+[sub_resource type="Theme" id=10]
+Fonts/fonts/large = SubResource( 11 )
+
 [node name="World" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -51,14 +56,12 @@ material = SubResource( 6 )
 scale = Vector2( 156, 156 )
 texture = SubResource( 7 )
 
-[node name="Sprite" type="Sprite" parent="Planet"]
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Planet"]
 shape = SubResource( 2 )
 
-[node name="Asteroid" parent="." instance=ExtResource( 5 )]
-position = Vector2( 69, -146 )
+[node name="Sprite" type="Sprite" parent="Planet"]
+scale = Vector2( 2.1244, 2.1244 )
+texture = ExtResource( 2 )
 
 [node name="Ship" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -81 )
@@ -129,4 +132,7 @@ anchor_bottom = 0.5
 margin_left = 15.0
 margin_right = 25.0
 margin_bottom = 10.0
+theme = SubResource( 10 )
 script = ExtResource( 12 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]

@@ -8,7 +8,7 @@ var collected = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sprite.frame = resource_attributes.index
+	sprite.frame = randi() % sprite.hframes
 	sprite.material.set_shader_param("color", resource_attributes.color)
 
 func _on_Resource_body_entered(body):
