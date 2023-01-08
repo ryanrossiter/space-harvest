@@ -1,6 +1,7 @@
 extends Node2D
 
 #var Asteroid = preload("res://Asteroid.tscn")
+var dog = preload("res://Dog.tscn").instance()
 
 var rand_x
 var rand_y
@@ -16,3 +17,7 @@ func _ready():
 		else:
 			asteroid.global_position = Vector2(rand_x, rand_y)
 			add_child(asteroid)
+	rand_x = rand_range(-500, 500)
+	rand_y = rand_range(-500, 500)
+	dog.global_position = Vector2(rand_x, rand_y)
+	add_child(dog)
